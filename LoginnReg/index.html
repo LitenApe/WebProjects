@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Log/Reg</title>
+
+    <link rel="stylesheet" href="logInn.css" type="text/css">
+  </head>
+  <body>
+    <div id="bg"></div>
+
+
+    <div class="container">
+      <div class="box">
+        <div id="front">
+          <h4>LOG INN</h4>
+          <p id="log-error"></p>
+          <p id="log-error2"></p>
+          <p>E-mail</p>
+          <input></input>
+          <p>Password</p>
+          <input type="password"></input>
+          <a id="flipBack">Dont have a user account yet?</a>
+          <a id="logInn">LOG INN</a>
+        </div>
+        <div id="back">
+          <h4>REGISTER</h4>
+          <p>E-mail</p>
+          <input></input>
+          <p>Password</p>
+          <input type="password"></input>
+          <p>Repeat Password</p>
+          <input type="password"></input>
+          <a id="reg">REGISTER</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+      $('#logInn').click(function(){
+        $('#front input').addClass('error');
+        $('#log-error').text('E-mail or password is wrong');
+        $('#log-error2').text('Please try again');
+      });
+
+      $('#flipBack').click(function(){
+        $('.box').addClass('flip');
+      });
+
+      $('#reg').click(function(){
+        $('.box').removeClass('flip');
+        $('input').removeClass('error');
+        $('#log-error').text('');
+        $('#log-error2').text('');
+      });
+
+      $('input').click(function(){
+        $(this).removeClass('error');
+      });
+
+    </script>
+
+  </body>
+</html>

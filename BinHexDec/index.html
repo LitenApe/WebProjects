@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Binary <-> Hex <-> Decimal</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="form-group">
+                <input type="number" id="binary" class="form-control" v-model="binary" v-on:input="bin">
+                <label for="binary">Binary</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="hexadec" class="form-control" v-model="hexadecimal" v-on:input="hex">
+                <label for="hexadec">Hexadecimal</label>
+            </div>
+            <div class="form-group">
+                <input type="number" id="decimal" class="form-control" v-model="decimal" v-on:input="dec">
+                <label for="decimal">Decimal</label>
+            </div>
+        </div>
+
+        <script src="vuejs.js"></script>
+        <script src="script.js" charset="utf-8"></script>
+    </body>
+</html>

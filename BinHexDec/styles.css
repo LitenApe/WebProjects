@@ -1,0 +1,49 @@
+#app{
+    width: 200px;
+    margin: auto;
+    margin-top: 30vh;
+}
+
+#app .form-group input{
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #000;
+
+    margin-bottom: -3px;
+    height: 40px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 1s;
+}
+
+#app .form-group input:focus{
+    outline: none;
+    border-color: #CC9E61;
+}
+
+#app .form-group input[type=number]::-webkit-inner-spin-button,
+#app .form-group input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#app .form-group label{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+@keyframes colour-changes{
+    0% {background-color: #69D2E7;}
+    20% {background-color: #A7DBD8;}
+    40% {background-color: #E0E4CC;}
+    60% {background-color: #F38630;}
+    80% {background-color: #FA6900;}
+    100% {background-color: #69D2E7;}
+}
+
+body{
+    background-color: #69D2E7;
+    animation-name: colour-changes;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}

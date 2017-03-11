@@ -1,0 +1,134 @@
+body, html {
+  overflow-x: hidden;
+  color: #fefdfb;
+  background-color: #292B37;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin-top: 0;
+  background-image: linear-gradient(to right, transparent, transparent, transparent, rgba(254, 253, 251, 0.75), transparent, transparent, transparent);
+}
+
+.good {
+  border-bottom: 4px solid #66BB6A;
+}
+
+.good-order {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
+  -webkit-order: 2;
+  -moz-order: 2;
+  order: 2;
+  -ms-flex-order: 2;
+}
+
+.warning {
+  border-bottom: 4px solid #FFA726;
+}
+
+.warning-order {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
+  -webkit-order: 1;
+  -moz-order: 1;
+  order: 1;
+  -ms-flex-order: 1;
+}
+
+.error {
+  border-bottom: 4px solid #DD2828;
+}
+
+.error-order {
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  box-ordinal-group: 0;
+  -webkit-order: 0;
+  -moz-order: 0;
+  order: 0;
+  -ms-flex-order: 0;
+}
+
+.card {
+  color: black;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 2px;
+}
+.card p {
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+.card h5 {
+  font-weight: 200;
+}
+
+#header,
+#footer {
+  background-color: #292B37;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#header-container,
+#overall-status,
+#responsetimes,
+#servers,
+#devices,
+#footer-container {
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#overall-status {
+  margin-top: 10px;
+}
+
+#responsetimes .row .card {
+  position: relative;
+}
+#responsetimes .row .card i {
+  position: absolute;
+  left: 45px;
+  top: 10px;
+  color: #292B37;
+}
+#responsetimes .row .card i.fa-phone {
+  padding-top: 2px;
+}
+
+#devices #device-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#devices #device-container .card {
+  overflow-y: scroll;
+  height: 100px;
+}

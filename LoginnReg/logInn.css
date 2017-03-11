@@ -1,0 +1,142 @@
+html,body{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica;
+}
+
+#bg{
+  position: fixed;
+  width: 110%;
+  height: 110%;
+
+  z-index: -1;
+
+  background-image: url(images/IMG_20160801_202953.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.container{
+  width: 350px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+  margin: 30px;
+
+  font-weight: bold;
+
+  transition: all 300ms ease-in;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+
+  transition: 500ms;
+}
+#front, #back{
+  background-color: rgba(240,240,240,0.8);
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backface-visibility: hidden;
+}
+
+#front h4{
+  margin-bottom: 0;
+}
+
+#back{
+  transform: rotateY(180deg);
+}
+.flip{
+  transform: rotateY(180deg);
+}
+
+input:focus{
+  outline: none;
+}
+
+#front input, #back input{
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 40px;
+  width: 70%;
+  border: none;
+  padding-left: 10px;
+}
+
+#front input:focus, #back input:focus{
+  border: 2px dashed #123 !important;
+}
+
+.error{
+  border: 2px dashed #ff0000 !important;
+}
+
+#flipBack{
+  font-size: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#flipBack:hover{
+  color: #2454eb;
+}
+
+#flipBack:active{
+  color: #123fca;
+}
+
+#logInn, #reg{
+  margin: 5px;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 73%;
+  border-radius: 5px;
+
+  background-color: #32CD32;
+
+  text-align: center;
+
+  transition: 400ms;
+}
+
+#logInn:hover, #reg:hover{
+  background-color: #28a428;
+  color: #fff;
+}
+
+#logInn:active, #reg:active{
+  background-color: #239023;
+  color: #fff;
+}
+
+p{
+  font-size: 12px;
+  width: 72%;
+  text-align: left;
+  margin: 2px;
+  padding: 0;
+}
+
+#log-error, #log-error2{
+  text-align: center;
+  color: #ff0000;
+}

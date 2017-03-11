@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Son Thanh Vo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./components/font-awesome.min.css">
+        <link rel="stylesheet" href="./components/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Status Page</title>
+    </head>
+    <body>
+
+        <section id="header">
+            <div id="header-container" class="container-fluid">
+                <h1>System Status</h1>
+            </div>
+        </section>
+
+        <section id="overall-status">
+            <div class="container-fluid">
+                <div class="card">
+                    <h5><!-- her vil det kommer en melding fra js --></h5>
+                </div>
+            </div>
+        </section>
+
+        <section id="responsetimes">
+            <div class="container-fluid">
+                <h4>Responstider</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="container-fluid card">
+                            <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                            <h5><!-- her vil det komme tider fra js --></h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="container-fluid card">
+                            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                            <h5><!-- her vil det komme tider fra js --></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servers">
+            <div class="container-fluid">
+                <h4>Server</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="container-fluid card">
+                            <h5>Websiden</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="container-fluid card">
+                            <h5>Filserver</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="container-fluid card">
+                            <h5>Mail</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="devices">
+            <div class="container-fluid">
+                <h4>Enheter</h4>
+                <hr>
+                <div id="device-container" class="row">
+                    <!-- Her vil det bli lagt inn elementer fra js -->
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div id="footer-container" class="container-fluid">
+                <h4>Vi kan nås via mail: <a href="mailto:johndoe@company.com?subject=feedback">support@company.no</a></h4>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="./components/jquery.min.js"></script>
+        <script src="./components/tether.min.js"></script>
+        <script src="./components/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>
