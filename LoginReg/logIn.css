@@ -103,7 +103,7 @@ input:focus{
   color: #123fca;
 }
 
-#logInn, #reg{
+#logIn, #reg{
   margin: 5px;
   padding: 0;
   padding-top: 15px;
@@ -118,12 +118,12 @@ input:focus{
   transition: 400ms;
 }
 
-#logInn:hover, #reg:hover{
+#logIn:hover, #reg:hover{
   background-color: #28a428;
   color: #fff;
 }
 
-#logInn:active, #reg:active{
+#logIn:active, #reg:active{
   background-color: #239023;
   color: #fff;
 }
