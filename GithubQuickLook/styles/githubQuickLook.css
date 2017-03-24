@@ -1,0 +1,105 @@
+*{
+    font-weight: lighter;
+    font-size: 14px;
+    text-align: center;
+}
+
+.section{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container{
+    width: 100vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-container{
+    display: inline-block;
+}
+
+input{
+     margin: 5px 0 5px 5px;
+     padding-left: 10px;
+     padding-right: 100px;
+     height: 42px;
+     width: 205px;
+
+     border: 2px solid hsl(217, 71%, 33%);
+     border-right: 0;
+
+     outline: none;
+     text-align: left;
+}
+
+button{
+    position: relative;
+    margin: 0;
+    height: 42px;
+    width: 80px;
+    left: -5px;
+
+    border: 2px solid hsl(217, 71%, 33%);
+    border-left: 0;
+    background-color: hsl(217, 71%, 53%);
+    color: #fff;
+    outline: none;
+}
+
+button:hover{
+    background-color: hsl(217, 200%, 56%);
+    cursor: pointer;
+}
+
+a{
+    color: #000;
+}
+
+a:hover{
+    color: hsl(217, 71%, 43%);
+}
+
+.card,
+.expand-transition{
+    transform: scale(1);
+    margin-top: 20px;
+    width: 280px;
+    display: inline-block;
+    transition: .5s;
+}
+.card h1, .card h2, .card h3,
+.card h4, .card h5, .card h6,
+.card p{
+    text-align: left;
+}
+
+.expand-enter-active{
+    animation-name: expand-in;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+.expand-leave-active{
+    animation-name:expand-out;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+.expand-enter,
+.expand-leave-to{
+    transform: scale(0) rotate(0deg);
+}
+
+@keyframes expand-in{
+    0%{transform: scale(0) rotate(0);}
+    30%{transform: scale(2) rotate(180deg);}
+    100%{transform: scale(1) rotate(360deg);}
+}
+@keyframes expand-out{
+    0%{transform: scale(1) rotate(0);}
+    30%{transform: scale(2) rotate(180deg);}
+    100%{transform: scale(0) rotate(360deg);}
+}

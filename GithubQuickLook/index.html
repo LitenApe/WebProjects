@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Github User Statistics</title>
+    <link rel="stylesheet" href="./styles/bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/githubQuickLook.css">
+
+    <section id="app" class="section">
+        <h1 class="title">Github QuickLook</h1>
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="search-box" value="" v-model="username" @keydown.enter="search" autofocus>
+                <button type="button" v-on:click="search">Search</button>
+            </div>
+            <transition name="expand">
+                <div class="card" v-if="display">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                <img v-bind:src="userobj.avatar_url" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4">{{ userobj.name }}</p>
+                                <p class="subtitle is-6">@{{ userobj.login }}</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p v-if="userobj.bio !== null">{{ userobj.bio }}</p>
+                            <p>Location: {{ userobj.location }}</p>
+                            <p>Followers: {{ userobj.followers }}</p>
+                            <p>Repositories: {{ userobj.public_repos }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="card-footer-item fa fa-github fa-2x" v-bind:href="userobj.html_url" target="_blank" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                </div>
+            </transition>
+        </div>
+    </section>
+
+    <script src="./scripts/axios.js" charset="utf-8"></script>
+    <script src="./scripts/vue.js" charset="utf-8"></script>
+    <script src="./scripts/githubQuickLook.js" charset="utf-8"></script>
+</html>
