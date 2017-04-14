@@ -1,34 +1,142 @@
-<doctype? html>
+<!DOCTYPE html>
+<html>
 <head>
-  <link rel="stylesheet" href="countdown.css" type="text/css">
+  <meta charset="utf-8">
+  <title>Is it time?</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <style media="screen">
+  body{
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    height: 100vh;
+    line-height: 100vh;
+    margin: 0;
+  }
+
+  #timer{
+    display: inline-block;
+    line-height: normal;
+    font-size: 14px;
+    font-weight: 100;
+    color: #000;
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #timer > div{
+    width: 50px;
+    padding: 5px;
+    border-radius: 3px;
+    background: rgba(255, 253, 231, .3);
+    display: inline-block;
+  }
+
+  #timer div > span{
+    display: inline-block;
+  }
+
+  .smalltext{
+    padding-top: 5px;
+    font-size: 12px;
+  }
+
+  .no{
+    color: #FFF;
+    background-color: #F44336;
+  }
+
+  .yes{
+    background-color: #4CAF50;
+  }
+  </style>
 </head>
 <body>
-  <section id = "mainSection">
+  <div id="timer">
     <div>
-      <h1>Kommer Snart!</h1>
-      <div id = "clock">
-        <div>
-          <span class = "days"></span>
-          <br><h4>Dager</h4>
-        </div>
-        <br>
-        <div>
-          <span class = "hours"></span>
-          <br><h4>T</h4>
-        </div>
-        <div>
-          <span class = "minutes"></span>
-          <br><h4>M</h4>
-        </div>
-        <div>
-          <span class = "seconds"></span>
-          <br><h4>S</h4>
-        </div>
-      </div>
-      <img id="phone" src="Nexus5x.png">
+      <span class="days"></span>
+      <div class="smalltext">Days</div>
     </div>
-  </section>
+    <div>
+      <span class="hours"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div>
+      <span class="minutes"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+      <span class="seconds"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+  </div>
+  <div id="container"></div>
 
-  <script type = "text/javascript" src="countdown.js"></script>
+  <script type="text/javascript">
+  const today = new Date()
+  const time = {
+    day: parseInt(today.getUTCDate(), 10),
+    month: parseInt(today.getMonth(), 10),
+    year: parseInt(today.getFullYear(), 10)
+  }
+  var body = document.getElementById('container')
+
+  if(time.day == 6 && time.month == 7 && time.year == 2017){
+    document.getElementsByTagName('body')[0].className += 'yes'
+    body.innerHTML = 'YES'
+  }else{
+    document.getElementsByTagName('body')[0].className += 'no'
+    body.innerHTML = 'NO'
+  }
+
+  initializeClock('timer','August 6 2017')
+
+  function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var days = clock.querySelector('.days')
+    var hours = clock.querySelector('.hours')
+    var minutes = clock.querySelector('.minutes')
+    var seconds = clock.querySelector('.seconds');
+
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
+
+      days.innerHTML = t.days;
+      hours.innerHTML = ('0' + t.hours).slice(-2)
+      minutes.innerHTML = ('0' + t.minutes).slice(-2)
+      seconds.innerHTML = ('0' + t.seconds).slice(-2);
+
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+
+    function getTimeRemaining(endtime){
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60)
+      var minutes = Math.floor( (t/1000/60) % 60 )
+      var hours = Math.floor( (t/(1000*60*60)) % 24 )
+      var days = Math.floor( t/(1000*60*60*24) )
+      return {
+        total: t,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      }
+    }
+
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
+  }
+
+  </script>
 </body>
 </html>
