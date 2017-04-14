@@ -6,4 +6,4 @@ different things i've made in my sparetime
 - [StatusPage](https://litenape.github.io/statusPage) - A status page concept(January 2017)
 - [HexRgb](https://litenape.github.io/hexRgb) - A background colour changer(August 2016)
 - LoginReg - A log inn page/registration page(May 2016)
-- CountDown - A simple countdown clock(January 2016)
+- [CountDown](https://litenape.github.io/wedding) - A simple countdown clock(January 2016)
