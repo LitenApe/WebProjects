@@ -1,0 +1,82 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.username-field,
+.password-field{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  margin: .5rem;
+  padding: .2rem;
+}
+
+input{
+  position: relative;
+  display: block;
+  padding: .5rem .5rem .5rem 1rem;
+  width: 170px;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 2px solid #000;
+  outline: 0;
+  z-index: 2;
+  transition: all .3s ease-in-out;
+  transform-origin: left;
+}
+
+label{
+  position: absolute;
+  font-size: 1rem;
+  top: .75rem;
+  left: 1.2rem;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+  top: -.4rem;
+  font-size: .75rem;
+  color: #009688;
+}
+
+input:focus{
+  border-bottom-color: #009688;
+}
+
+button{
+  position: relative;
+  width: 195px;
+  padding: .5rem;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 3px;
+  background-color: #009688;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 7px -5px #000;
+  transition: all .3s ease-in-out;
+}
+
+button:hover{
+  box-shadow: 0 9px 10px -6px #000;
+}
+
+button:active{
+  background-color: #004D40;
+  box-shadow: 0 5px 15px -5px #000;
+}
