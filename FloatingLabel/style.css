@@ -14,8 +14,7 @@ html, body{
   flex-direction: column;
 }
 
-.username-field,
-.password-field{
+.input-group{
   position: relative;
   display: inline-flex;
   flex-direction: column;
@@ -51,9 +50,11 @@ input:focus ~ label,
 input:valid ~ label{
   top: -.4rem;
   font-size: .75rem;
-  color: #009688;
 }
 
+input:focus ~ label{
+  color: #009688;
+}
 input:focus{
   border-bottom-color: #009688;
 }

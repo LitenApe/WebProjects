@@ -1,7 +1,7 @@
 # Web Projects
 
 different things i've made in my sparetime
-- FloatingLabel - Just a quick attempt at making a floating label(May 2017)
+- [FloatingLabel](https://litenape.github.io/floatingLabel) - Just a quick attempt at making a floating label(May 2017)
 - GithubQuickLook - Take a quick look into a github profile(March 2017)
 - [BinHexDec](https://litenape.github.io/binHexDec) - Converts one type of number to other types(March 2017)
 - [StatusPage](https://litenape.github.io/statusPage) - A status page concept(January 2017)
