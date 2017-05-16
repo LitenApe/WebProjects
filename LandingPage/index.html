@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LitenApe</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/index.css">
+</head>
+<body>
+
+  <a href="mailto:sonvo95@outlook.com" id="contact-mail"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+
+  <section id="header">
+    <h1 class="name">Ltnp</h1>
+    <h1 class="name">ieAe</h1>
+    <p id="full-name">Son Thanh Vo</p>
+  </section>
+
+  <section id="portfolio">
+    <ul id="projects">
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>
+    <h2>I am a norwegian developer and my interest is to create great online
+      experiences. Feel free to get in touch if you'd like to talk about
+      something I made or if you just want to talk. You can contact me by
+      sending me an email to this <a href="mailto:sonvo95@outlook.com">this address</a>
+    </h2>
+  </section>
+
+  <div id="footer">
+    <div class="container">
+      <h1>This webpage was made while sitting comfortably in a stress chair at school.</h1>
+      <a href="https://www.linkedin.com/in/sonthanhvo/" target="_blank"><i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/LitenApe" target="_blank"><i class="fa fa-3x fa-github-square" aria-hidden="true"></i></a>
+      <a href="http://www.writeopinions.com/bathtub" target="_blank"><i class="fa fa-3x fa-bath" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <script src="{{ site.gtihub.url }}/assets/javascript/index.js" charset="utf-8"></script>
+
+</body>
+</html>
