@@ -1,8 +1,8 @@
 # logReg
-logReg is a simple log inn screen that looks aestically decent while testing out the css blur and rotate property
+logReg is a simple log inn screen that looks ok while testing out the css blur and rotate property
 
 # Why did I make this?
-The main reason for making something so simple as this is beacause i wanted to play around with the blur and flipping properties in CSS.
+The main reason for making this page was to deep diver into css and it's possibilities. I wanted to test out the blur and flipping properties of CSS and explore how I could use it to hide/display information without adding/removing elements.
 
 # Note to the creator!
 Add thickness to the card when you have the time. Making it look alot more realistic and awesome!

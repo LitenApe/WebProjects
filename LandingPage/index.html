@@ -1,51 +1,138 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <title>LitenApe</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>LitenApe</title>
+  </head>
+  <body>
 
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/font-awesome.css">
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/index.css">
-</head>
-<body>
+    <section id="header">
+      <div class="frame"></div>
+      <img src="./assets/selfie.jpg" alt="selfie">
+      <div id="header-info">
+        <div id="name-box">
+          <h1>Thanh Son Vo</h1>
+        </div>
+        <p>
+          <b>Thanh Son specializes in making things for human people.</b> By
+          day he crafts digital interfaces with his buddies at Datasentral.
+          By night he plays around with food and creates alot of nasty
+          combinations.
+        </p>
+      </div>
+    </section>
 
-  <a href="mailto:sonvo95@outlook.com" id="contact-mail"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+    <section id="portfolio">
+      <h1>Portfolio</h1>
+      <div class="frame"></div>
 
-  <section id="header">
-    <h1 class="name">Ltnp</h1>
-    <h1 class="name">ieAe</h1>
-    <p id="full-name">Son Thanh Vo</p>
-  </section>
+      <div class="project" style="background-image: url(./assets/floatinglabel.png);">
+        <div class="info-box">
+          <h4>Floating Label</h4>
+          <div class="links">
+            <a href="https://github.com/LitenApe/WebProjects/tree/master/FloatingLabel" target="_blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://litenape.github.io/floatingLabel" target="_blank">
+              <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <section id="portfolio">
-    <ul id="projects">
-    </ul>
-  </section>
+      <div class="project" style="background-image: url(./assets/binhexdec.png);">
+        <div class="info-box">
+          <h4>Converter</h4>
+          <div class="links">
+            <a href="https://github.com/LitenApe/WebProjects/tree/master/BinHexDec" target="_blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://litenape.github.io/binHexDec" target="_blank">
+              <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <section id="contact">
-    <h1>Contact</h1>
-    <h2>I am a norwegian developer and my interest is to create great online
-      experiences. Feel free to get in touch if you'd like to talk about
-      something I made or if you just want to talk. You can contact me by
-      sending me an email to this <a href="mailto:sonvo95@outlook.com">this address</a>
-    </h2>
-  </section>
+      <div class="project" style="background-image: url(./assets/githubquicklook.png);" target="_blank">
+        <div class="info-box">
+          <h4>Github Quicklook</h4>
+          <div class="links">
+            <a href="https://github.com/LitenApe/WebProjects/tree/master/GithubQuickLook" target="_blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <div id="footer">
-    <div class="container">
-      <h1>This webpage was made while sitting comfortably in a stress chair at school.</h1>
-      <a href="https://www.linkedin.com/in/sonthanhvo/" target="_blank"><i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a>
-      <a href="https://github.com/LitenApe" target="_blank"><i class="fa fa-3x fa-github-square" aria-hidden="true"></i></a>
-      <a href="http://www.writeopinions.com/bathtub" target="_blank"><i class="fa fa-3x fa-bath" aria-hidden="true"></i></a>
-    </div>
-  </div>
+      <div class="project" style="background-image: url(./assets/statuspage.png);">
+        <div class="info-box">
+          <h4>Status page</h4>
+          <div class="links">
+            <a href="https://github.com/LitenApe/WebProjects/tree/master/StatusPage" target="_blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://litenape.github.io/statusPage" target="_blank">
+              <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <script src="{{ site.gtihub.url }}/assets/javascript/index.js" charset="utf-8"></script>
+      <div class="project" style="background-image: url(./assets/hexrgb.png);">
+        <div class="info-box">
+          <h4>Colour Converter</h4>
+          <div class="links">
+            <a href="https://github.com/LitenApe/WebProjects/tree/master/HexRgb" target="_blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://litenape.github.io/hexRgb" target="_blank">
+              <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-</body>
+      <div class="project" style="background-image: url(./assets/countdown.png);">
+        <div class="info-box">
+          <h4>Countdown</h4>
+          <div class="links">
+            <a href="https://github.com/LitenApe/WebProjects/tree/master/CountDown" target="_blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://litenape.github.io/wedding" target="_blank">
+              <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="container">
+        <h1>Social</h1>
+        <a href="mailto:sonvo95@outlook.com">
+          <i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sonthanhvo/">
+          <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/LitenApe">
+          <i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.snapchat.com/add/litenape">
+          <i class="fa fa-snapchat-square fa-3x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="frame"></div>
+    </section>
+  </body>
 </html>

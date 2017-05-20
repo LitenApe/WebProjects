@@ -1,0 +1,3 @@
+# General
+
+After i saw [this](https://epochs.co/features/the-shape-of-clothes-to-come) article. I got really curious about how parallax effect and how they could be used. What really triggered my curiosity was the smart use of section separator effect to display the header for the next article. It may not be useful, but it gave a really unique and powerful effect while reading. It looked like something more then it really was, and it showed me that CSS was more powerful then I first imagined. This little piece here was thrown together as an attempt to mimic the transition effect between the sections. 
