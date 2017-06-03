@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LoadingScreens</title>
+    <style media="screen">
+      html,body{
+        position: relative;
+        margin: 0;
+
+        line-height: 1.15;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      section{
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 50vh;
+        width: 100vw;
+
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .tripple-spinning-circles{
+        position: absolute;
+        padding: 75px;
+
+        border: 3px solid transparent;
+        border-top: 3px solid #9c27b0;
+        border-bottom: 3px solid #9c27b0;
+        border-radius: 100%;
+
+        transform: rotate(0deg);
+        animation-name: spin;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+      }
+      .tripple-spinning-circles::after{
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 80%;
+
+        left: 8%;
+        top: 8%;
+
+        border: 3px solid transparent;
+        border-top: 3px solid #673ab7;
+        border-bottom: 3px solid #673ab7;
+        border-radius: 100%;
+
+        transform: rotate(0deg);
+        animation-name: spin;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+      }
+      .tripple-spinning-circles::before{
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+
+        left: -13%;
+        top: -13%;
+
+        border: 3px solid transparent;
+        border-top: 3px solid #3f51b5;
+        border-bottom: 3px solid #3f51b5;
+        border-radius: 100%;
+
+        transform: rotate(0deg);
+        animation-name: spin;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes spin {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+      }
+
+      .bar{
+        position: relative;
+        padding: 30px 5px;
+        background-color: #004d40;
+
+        animation-name: minifying;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .bar:nth-child(2){animation-delay: .1s}
+      .bar:nth-child(3){animation-delay: .2s}
+      .bar:nth-child(4){animation-delay: .3s}
+      .bar:nth-child(5){animation-delay: .4s}
+      .bar:nth-child(6){animation-delay: .5s}
+      .bar:nth-child(7){animation-delay: .6s}
+      .bar:nth-child(8){animation-delay: .7s}
+      .bar:nth-child(9){animation-delay: .8s}
+      .bar:nth-child(10){animation-delay: .9s}
+      @keyframes minifying {
+        0%{
+          padding: 30px 5px;
+          background-color: #004d40;
+        }
+        50%{
+          padding: 2px 5px;
+          background-color: #e0f2f1;
+        }
+        100%{
+          padding: 30px 5px;
+          background-color: #004d40;
+        }
+      }
+
+      .container{
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 75px;
+      }
+      .shaft{
+        position: relative;
+        height: 50px;
+        width: 7px;
+        background-color: #ff6f00;
+
+        animation-name: wave;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .shaft:nth-child(2){animation-delay: .1s;}
+      .shaft:nth-child(3){animation-delay: .2s;}
+      .shaft:nth-child(4){animation-delay: .3s;}
+      .shaft:nth-child(5){animation-delay: .4s;}
+      .shaft:nth-child(6){animation-delay: .5s;}
+      .shaft:nth-child(7){animation-delay: .6s;}
+      .shaft:nth-child(8){animation-delay: .7s;}
+      .shaft:nth-child(9){animation-delay: .8s;}
+      .shaft:nth-child(10){animation-delay: .9s;}
+      @keyframes wave {
+        0%{height: 50px;background-color: #ff6f00;}
+        25%{height: 10px;background-color: #fff8e1;}
+        50%{height: 50px;background-color: #ff6f00;}
+        75%{height: 10px;background-color: #fff8e1;}
+        100%{height: 50px;background-color: #ff6f00;}
+      }
+
+      .container2{
+        width: 90px;
+        height: 90px;
+        display: inline-flex;
+        flex-wrap: wrap;
+      }
+      .box{
+        position: relative;
+        width: 45px;
+        height: 45px;
+        background-color: #795548;
+        transform: rotate(0deg) translate(0px, 0px);
+      }
+      .box:nth-child(1){
+        transform-origin: top left;
+        animation-name: spinner1;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .box:nth-child(2){
+        transform-origin: top right;
+        animation-name: spinner2;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .box:nth-child(3){
+        transform-origin: bottom left;
+        animation-name: spinner3;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .box:nth-child(4){
+        transform-origin: bottom right;
+        animation-name: spinner4;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes spinner1 {
+        0%{transform: rotate(0deg) translate(0px, 0px);}
+        20%{
+          transform: rotate(0deg) translate(-25px, -25px);
+          background-color: #795548;
+        }
+        50%{background-color: #8d6e63;}
+        80%{
+          transform: rotate(1440deg) translate(-25px, -25px);
+          background-color: #795548;
+        }
+        100%{transform: rotate(1440deg) translate(0px, 0px);}
+      }
+      @keyframes spinner2 {
+        0%{transform: rotate(0deg) translate(0px, 0px);}
+        20%{
+          transform: rotate(0deg) translate(25px, -25px);
+          background-color: #795548;
+        }
+        50%{background-color: #8d6e63;}
+        80%{
+          transform: rotate(1440deg) translate(25px, -25px);
+          background-color: #795548;
+        }
+        100%{transform: rotate(1440deg) translate(0px, 0px);}
+      }
+      @keyframes spinner3 {
+        0%{transform: rotate(0deg) translate(0px, 0px);}
+        20%{
+          transform: rotate(0deg) translate(-25px, 25px);
+          background-color: #795548;
+        }
+        50%{background-color: #8d6e63;}
+        80%{
+          transform: rotate(1440deg) translate(-25px, 25px);
+          background-color: #795548;
+        }
+        100%{transform: rotate(1440deg) translate(0px, 0px);}
+      }
+      @keyframes spinner4 {
+        0%{transform: rotate(0deg) translate(0px, 0px);}
+        20%{
+          transform: rotate(0deg) translate(25px, 25px);
+          background-color: #795548;
+        }
+        50%{background-color: #8d6e63;}
+        80%{
+          transform: rotate(1440deg) translate(25px, 25px);
+          background-color: #795548;
+        }
+        100%{transform: rotate(1440deg) translate(0px, 0px);}
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="tripple-spinning-circles">
+      </div>
+      <p>Loading</p>
+    </section>
+
+    <section>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+        <div class="shaft"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container2">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
+  </body>
+</html>
