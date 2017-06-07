@@ -239,6 +239,99 @@
         }
         100%{transform: rotate(1440deg) translate(0px, 0px);}
       }
+
+      .circle-rail{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border: 3px solid #ccc;
+        border-radius: 100%;
+      }
+
+      .circle-rail::after{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: -3px;
+        top: -3px;
+        border: 3px solid transparent;
+        border-bottom: 3px solid #00bcd4;
+        border-radius: 100%;
+        transform: rotate(0deg);
+
+        animation-name: circle-rail-spin;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes circle-rail-spin {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+      }
+
+      .bar-rail{
+        position: relative;
+        width: 200px;
+        height: 3px;
+        background-color: #ccc;
+        overflow: hidden;
+      }
+
+      .bar-rail::after{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 3px;
+        top: 0;
+        left: 0;
+        background-color: #2196f3;
+        animation: shrink-expand 10s infinite;
+      }
+
+      @keyframes shrink-expand {
+        0%{width: 0;}
+        25%{
+          left: 0;
+          width: 200px;
+        }
+        50%{
+          left: 200px;
+          width: 200px;
+        }
+        75%{
+          left: 0;
+          width: 200px;
+        }
+        100%{width: 0;}
+      }
+
+      .triangle{
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 25px solid rgb(12, 123, 321);
+      }
+
+      .t1{
+        transform: rotate(90deg) translate(12.5px, 12px);
+      }
+
+      .t2{
+        transform: translateY(-23px);
+        transform-origin: top;
+        animation: triangle-merge 3s infinite;
+      }
+
+      @keyframes triangle-merge {
+        0%{transform: rotate(0deg);}
+        25%{transform: rotate(-90deg);}
+        50%{transform: rotate(-180deg);}
+        75%{transform: rotate(-90deg);}
+        100%{transform: rotate(0deg);}
+      }
     </style>
   </head>
   <body>
@@ -282,6 +375,21 @@
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="circle-rail"></div>
+    </section>
+
+    <section>
+      <div class="bar-rail"></div>
+    </section>
+
+    <section>
+      <div class="container3">
+        <div class="triangle t1"></div>
+        <div class="triangle t2"></div>
       </div>
     </section>
   </body>
