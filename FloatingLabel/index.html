@@ -6,19 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+      html, body{
+        margin: 0;
+        padding: 0;
+      }
 
-    <title>Floating Label</title>
+      body{
+        height: 100vh;
+        width: 100vw;
+        font-family: 'Nunito', sans-serif;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .input-group{
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        margin: .5rem;
+        padding: .2rem;
+      }
+
+      input{
+        position: relative;
+        display: block;
+
+        padding: .5rem .5rem .5rem 1rem;
+        width: 10rem;
+
+        font-size: 16px;
+
+        border: none;
+        border-bottom: 1px solid #123;
+        background-color: transparent;
+
+        z-index: 1;
+      }
+
+      label{
+        position: absolute;
+        font-size: 1rem;
+        top: .75rem;
+        left: 1.2rem;
+        transition: all .1s ease-in-out;
+        z-index: 0;
+      }
+
+      span{
+        position: absolute;
+        left: 3px;
+        bottom: 3px;
+        width: 0rem;
+        border: none;
+        border-bottom: 3px solid #009688;
+        z-index: 3;
+      }
+
+      input:focus ~ label,
+      input:valid ~ label{
+        top: -1rem;
+        font-size: .75rem;
+      }
+
+      input:focus ~ span{
+        animation-name: highlight;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      input:focus ~ label{
+        color: #009688;
+      }
+
+      button{
+        position: relative;
+        padding: .5rem;
+        width: 11.5rem;
+        background-color: #009688;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+
+      button::after{
+        content: "";
+        position: absolute;
+
+        width: 0;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+
+        background-color: rgba(12, 12, 12, .6);
+        transition: all .3s ease-in-out;
+      }
+
+      button:hover::after{
+        width: 100%;
+      }
+
+      button:active::after{
+        background-color: rgba(255, 255, 255, .6);
+      }
+
+      @keyframes highlight {
+        from{width: 0rem;}
+        to{width: 11.5rem;}
+      }
+    </style>
+    <title>Floating Label v2</title>
   </head>
   <body>
     <div class="container">
       <div class="input-group">
         <input type="text" name="username" value="" required>
         <label for="username">Username</label>
+        <span class="bar"></span>
       </div>
       <div class="input-group">
         <input type="password" name="password" value="" required>
         <label for="password">Password</label>
+        <span class="bar"></span>
       </div>
       <button type="button" name="button">Log In</button>
     </div>
