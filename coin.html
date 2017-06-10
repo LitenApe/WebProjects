@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      html, body{
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .coin{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: #FFC107;
+        border-radius: 100%;
+
+        animation: levitate 5s infinite;
+      }
+
+      .coin::before{
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+
+        width: 200px;
+        height: 200px;
+
+        border: 5px solid transparent;
+        border-left: 5px solid #FFD54F;
+        border-top: 5px solid #FFD54F;
+        border-radius: 100%;
+      }
+
+      .coin::after{
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+
+        width: 200px;
+        height: 200px;
+
+        border: 5px solid transparent;
+        border-right: 5px solid #FFA000;
+        border-bottom: 5px solid #FFA000;
+        border-radius: 100%;
+      }
+
+      .inner-circle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        margin: auto;
+        transform: translate(0px, 80px);
+        border-radius: 100%;
+      }
+
+      .inner-circle::before{
+        content: "";
+        position: absolute;
+
+        left: 0px;
+        top: 0px;
+
+        width: 28px;
+        height: 28px;
+
+        border-radius: 100%;
+        border: none;
+        border-left: 3px solid #FFD54F;
+        border-top: 3px solid #FFD54F;
+      }
+
+      @keyframes levitate {
+        0%{transform: translateY(0);}
+        50%{transform: translateY(-100px);}
+        100%{transform: translateY(0);}
+      }
+
+      .shadow{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: #757575;
+        border-radius: 100%;
+        box-shadow: 0 0 20px 20px #757575;
+        transform: rotateX(70deg);
+        animation: expand-shrink 5s infinite;
+      }
+
+      @keyframes expand-shrink {
+        0%{width: 100px;height: 100px;}
+        50%{width: 150px;height: 150px;}
+        100%{width: 100px;height: 100px;}
+      }
+    </style>
+    <title>Coin</title>
+  </head>
+  <body>
+    <div class="coin">
+      <div class="inner-circle"></div>
+    </div>
+    <div class="shadow">
+    </div>
+  </body>
+</html>
