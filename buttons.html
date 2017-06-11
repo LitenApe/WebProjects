@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      html, body{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      section{
+        position: relative;
+        width: 100vw;
+        height: 50vh;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /*Button nr 1*/
+      .container1{
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        color: #fff;
+      }
+
+      .container1 h4{
+        position: absolute;
+        margin: 0 auto;
+        left: 2px;
+        right: 0;
+        text-align: center;
+        line-height: 37px;
+        top: 0;
+        z-index: 2;
+      }
+
+      .container1 button{
+        position: relative;
+        margin: 0;
+        width: 35px;
+        height: 35px;
+
+        color: transparent;
+        background-color: #311B92;
+
+        border: 0px solid #311B92;
+
+        transition: all .3s ease-in-out;
+        z-index: 1;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .container1 button:nth-child(1){
+        transform: translateX(15px);
+        border-radius: 100% 0 0 100%;
+      }
+      .container1 button:nth-child(2){
+        transform: translateX(5px);
+      }
+      .container1 button:nth-child(3){
+        transform: translateX(-5px);
+      }
+      .container1 button:nth-child(4){
+        transform: translateX(-15px);
+        border-radius: 0 100% 100% 0;
+      }
+
+      .container1 button:hover{
+        background-color: #673AB7;
+      }
+
+      .container1 button:active{
+        background-color: #9575CD;
+      }
+
+      .container1:hover button:nth-child(1){
+        transform: translate(0);
+        border-radius: 100%;
+        color: #fff;
+        margin: 0 3px;
+      }
+      .container1:hover button:nth-child(2){
+        transform: translate(0);
+        border-radius: 100%;
+        color: #fff;
+        margin: 0 3px;
+      }
+      .container1:hover button:nth-child(3){
+        transform: translate(0);
+        border-radius: 100%;
+        color: #fff;
+        margin: 0 3px;
+      }
+      .container1:hover button:nth-child(4){
+        transform: translate(0);
+        border-radius: 100%;
+        color: #fff;
+        margin: 0 3px;
+      }
+
+      .container1:hover h4{
+        display: none;
+      }
+
+      /*Button nr 2*/
+      .container2{position: relative;}
+      .container2 button{
+        position: relative;
+        padding: 13px 35px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3F51B5;
+        border: none;
+        cursor: pointer;
+      }
+      .container2 label{
+        position: absolute;
+        top: 0;
+        right: -37px;
+        padding: 11px;
+        color: #fff;
+        background-color: #7986CB;
+        transform-origin: left;
+        transform-style: preserve-3d;
+        transform: rotateY(90deg);
+        transition: all .3s ease-in-out;
+      }
+      .container2:hover label{
+        transform: rotateY(0deg);
+      }
+
+      /*Button nr 3*/
+      .btn3{
+        padding: 15px 35px;
+
+        font-size: 16px;
+        font-weight: lighter;
+
+        color: #fff;
+        background-color: #006064;
+
+        border: none;
+        border-radius: 100px;
+
+        box-shadow: 0px 12px 15px -10px #000;
+
+        transition: all .3s ease-in-out;
+        outline: none;
+        cursor: pointer;
+      }
+      .btn3:hover{box-shadow: 0px 15px 25px -8px #555;}
+      .btn3:active{background-color: #0097A7;}
+    </style>
+    <title>Buttons</title>
+  </head>
+  <body>
+    <section>
+      <div class="container1">
+        <button type="button" name="button">&#954;</button>
+        <button type="button" name="button">&#952;</button>
+        <button type="button" name="button">&#950;</button>
+        <button type="button" name="button">&#948;</button>
+        <h4>Follow</h4>
+      </div>
+    </section>
+
+    <section>
+      <div class="container2">
+        <button type="button" name="button">Share</button>
+        <label for="button">&starf;</label>
+      </div>
+    </section>
+
+    <section>
+      <button class="btn3" type="button" name="button">Sign In</button>
+    </section>
+  </body>
+</html>
