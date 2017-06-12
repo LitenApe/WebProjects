@@ -19,6 +19,15 @@
         justify-content: center;
       }
 
+      section h1{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+
+        font-size: 60px;
+        color: #ddd;
+        font-weight: lighter;
+      }
       /*Button nr 1*/
       .container1{
         position: relative;
@@ -131,9 +140,7 @@
         transform: rotateY(90deg);
         transition: all .3s ease-in-out;
       }
-      .container2:hover label{
-        transform: rotateY(0deg);
-      }
+      .container2:hover label{transform: rotateY(0deg);}
 
       /*Button nr 3*/
       .btn3{
@@ -156,11 +163,118 @@
       }
       .btn3:hover{box-shadow: 0px 15px 25px -8px #555;}
       .btn3:active{background-color: #0097A7;}
+
+      /*Button nr 4*/
+      .container4 button{
+        margin: 5px;
+        width: 65px;
+        height: 65px;
+
+        color: #eee;
+        background-color: #311B92;
+
+        border: none;
+        border-radius: 100%;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .container4 button:hover{background-color: #673AB7;}
+      .container4 button:nth-child(2){
+        width: 100px;
+        height: 100px;
+      }
+      .container4 button:nth-child(2) p:nth-child(2){display: none;}
+      .container4 button:nth-child(2):hover p:nth-child(2){display: inline;}
+      .container4 button:nth-child(2):hover p:nth-child(1){display: none;}
+
+      .container4 button:nth-child(1):hover ~ button:nth-child(2){
+        width: 85px;
+        height: 85px;
+      }
+      .container4 button:nth-child(1):hover{
+        width: 85px;
+        height: 85px;
+      }
+
+      /*Button nr 5*/
+      .btn5{
+        position: relative;
+        height: 40px;
+        width: 120px;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        border: 2px solid #123;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .btn5::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        width: 0;
+        height: 0;
+
+        background-color: #9FA8DA;
+        transition: all .1s ease-in-out;
+        z-index: -1;
+      }
+
+      .btn5:hover::before{
+        width: 100%;
+        height: 100%;
+      }
+
+      /*Button nr 6*/
+      .btn6{
+        position: relative;
+        height: 40px;
+        width: 120px;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        border: 2px solid #123;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .btn6::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        margin: auto;
+        width: 0;
+
+        background-color: #9FA8DA;
+        transition: all .1s ease-in-out;
+        z-index: -1;
+      }
+
+      .btn6:hover::before{
+        width: 100%;
+      }
     </style>
     <title>Buttons</title>
   </head>
   <body>
     <section>
+      <h1>1</h1>
       <div class="container1">
         <button type="button" name="button">&#954;</button>
         <button type="button" name="button">&#952;</button>
@@ -171,6 +285,7 @@
     </section>
 
     <section>
+      <h1>2</h1>
       <div class="container2">
         <button type="button" name="button">Share</button>
         <label for="button">&starf;</label>
@@ -178,7 +293,26 @@
     </section>
 
     <section>
+      <h1>3</h1>
       <button class="btn3" type="button" name="button">Sign In</button>
+    </section>
+
+    <section>
+      <h1>4</h1>
+      <div class="container4">
+        <button type="button" name="button">Try</button>
+        <button type="button" name="button"><p>19$</p><p>Buy</p></button>
+      </div>
+    </section>
+
+    <section>
+      <h1>5</h1>
+      <button class="btn5" type="button" name="button">Sign Up</button>
+    </section>
+
+    <section>
+      <h1>6</h1>
+      <button class="btn6" type="button" name="button">Sign In</button>
     </section>
   </body>
 </html>
