@@ -269,6 +269,78 @@
       .btn6:hover::before{
         width: 100%;
       }
+
+      /*Button nr 7*/
+      .btn7{
+        position: relative;
+        height: 40px;
+        width: 170px;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        background-color: transparent;
+        border: 1px solid #000;
+        cursor: pointer;
+        outline: none;
+        transition: all .3s ease-in-out;
+      }
+
+      .btn7::before{
+        content: "";
+        position: absolute;
+
+        height: 35px;
+        width: 165px;
+
+        left: -4px;
+        top: -4px;
+
+        border: none;
+        border-left: 4px solid #123;
+        border-top: 4px solid #123;
+        transition: all .3s ease-in-out;
+      }
+
+      .btn7::after{
+        content: "";
+        position: absolute;
+
+        height: 35px;
+        width: 165px;
+
+        right: -4px;
+        bottom: -4px;
+
+        border: none;
+        border-right: 4px solid #123;
+        border-bottom: 4px solid #123;
+        transition: all .3s ease-in-out;
+      }
+
+      .btn7:hover::before{
+        height: 42px;
+        width: 172px;
+      }
+      .btn7:hover::after{
+        height: 42px;
+        width: 172px;
+      }
+      .btn7:active{font-size: 15px;}
+      .btn7:active::before{
+        top: -1px;
+        left: -1px;
+        border-width: 2px;
+        width: 168px;
+        height: 38px;
+      }
+      .btn7:active::after{
+        width: 168px;
+        height: 38px;
+        right: -1px;
+        bottom: -1px;
+        border-width: 2px;
+      }
     </style>
     <title>Buttons</title>
   </head>
@@ -313,6 +385,11 @@
     <section>
       <h1>6</h1>
       <button class="btn6" type="button" name="button">Sign In</button>
+    </section>
+
+    <section>
+      <h1>7</h1>
+      <button class="btn7" type="button" name="button">Forgot Password</button>
     </section>
   </body>
 </html>
