@@ -350,6 +350,68 @@
         75%{transform: rotate(-90deg);}
         100%{transform: rotate(0deg);}
       }
+
+      /*Animation 8*/
+      .container4{
+        height: 20px;
+        display: inline-flex;
+      }
+      .container4 .dot{
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        background-color: #123;
+        border-radius: 100%;
+        animation: snek 1s infinite;
+      }
+      .container4 .dot:nth-child(1){animation-delay: .05s}
+      .container4 .dot:nth-child(2){animation-delay: .1s}
+      .container4 .dot:nth-child(3){animation-delay: .15s}
+      .container4 .dot:nth-child(4){animation-delay: .2s}
+      .container4 .dot:nth-child(5){animation-delay: .25s}
+      .container4 .dot:nth-child(6){animation-delay: .3s}
+      .container4 .dot:nth-child(7){animation-delay: .35s}
+      .container4 .dot:nth-child(8){animation-delay: .4s}
+      .container4 .dot:nth-child(9){animation-delay: .45s}
+      .container4 .dot:nth-child(10){animation-delay: .5s}
+
+      @keyframes snek {
+        0%{margin-top: 2px;}
+        50%{margin-top: 30px;}
+        100%{margin-top: 2px;}
+      }
+
+      .container5 .dot{
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        background-color: #123;
+        border-radius: 100%;
+        animation: vibration 1s infinite;
+      }
+
+      @keyframes vibration {
+        0%{transform: translateX(0);}
+        10%{transform: translateX(5px);}
+        20%{transform: translateX(-10px);}
+        30%{transform: translateX(15px);}
+        40%{
+          transform: translateX(-20px);
+          width: 20px;
+        }
+        50%{transform: translateX(25px);}
+        60%{transform: translateX(-30px);}
+        70%{transform: translateX(35px);}
+        80%{transform: translateX(-40px);}
+        90%{
+          transform: translateX(45px);
+          width: 30px;
+        }
+        100%{
+          transform: translateX(-50px);
+          width: 20px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -415,6 +477,29 @@
       <div class="container3">
         <div class="triangle t1"></div>
         <div class="triangle t2"></div>
+      </div>
+    </section>
+
+    <section>
+      <h1>8</h1>
+      <div class="container4">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <section>
+      <h1>9</h1>
+      <div class="container5">
+        <div class="dot"></div>
       </div>
     </section>
   </body>
