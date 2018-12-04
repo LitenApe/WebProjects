@@ -1,0 +1,58 @@
+.timers {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timer {
+    position: relative;
+}
+
+.timer .time-label {
+    margin-bottom: -20px;
+    color: lightgray;
+}
+
+.timers .time {
+    color: white;
+}
+
+#lap-time {
+    font-size: 70px;
+}
+
+.btn {
+    position: relative;
+    height: 67px;
+    width: 67px;
+    
+    margin: 20px;
+
+    border: 2px;
+    border-style: solid;
+    border-radius: 100%;
+    border-color: #546E7A;
+    color: white;
+}
+
+.btn-border {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+
+    left: 2px;
+    top: 2px;
+
+    border: 2px solid #546E7A;
+    border-radius: 100%;
+}
+
+#start-btn {
+    background-color:#43A047;
+}
+
+#stop-btn {
+    background-color: #E53935;
+}

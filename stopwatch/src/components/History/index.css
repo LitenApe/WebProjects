@@ -1,0 +1,32 @@
+.history {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.entry {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    color: white;
+
+    border-bottom: 1px solid white;
+}
+
+.entry p {
+    position: relative;
+    padding: 0 15px;
+}
+
+.entry p span {
+    position: absolute;
+    left: 15px;
+    top: 0;
+
+    margin-top: -10px;
+
+    font-size: 10px;
+}
